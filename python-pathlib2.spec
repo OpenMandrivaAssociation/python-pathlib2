@@ -2,13 +2,13 @@
 %global srcversion 2.1.0
 
 Name:           python-%srcname
-Version:        2.1.0
+Version:        2.3.3
 Release:        1
 Summary:        Object-oriented filesystem paths
 Group:          Development/Python
 License:        BSD
 URL:            http://github.com/ipython/%srcname
-Source0:        http://pypi.python.org/packages/source/p/%srcname/%{srcname}-%{srcversion}.tar.gz
+Source0:        https://pypi.io/packages/source/p/pathlib2/pathlib2-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:	python-setuptools
@@ -33,25 +33,23 @@ pathlib can be used also on older Python versions.
 cp -a . %py2dir
 
 %build
-%{__python} setup.py build
+python setup.py build
 
 pushd %py2dir
-%{__python2} setup.py build
+python setup.py build
 
 %install
-%{__python} setup.py install -O1 --skip-build --root %{buildroot}
+python setup.py install -O1 --skip-build --root %{buildroot}
 
 pushd %py2dir
-%{__python2} setup.py install -O1 --skip-build --root %{buildroot}
+python setup.py install -O1 --skip-build --root %{buildroot}
 
 %files
 %doc README.rst CHANGELOG.rst LICENSE.rst
-%{python3_sitelib}/*.egg-info
-%{python3_sitelib}/%{srcname}.py
+%{py3_puresitedir}/*.egg-info
+%{py3_puresitedir}/%{srcname}.py
 
 %files -n python2-%srcname
 %doc README.rst CHANGELOG.rst LICENSE.rst
-%{python2_sitelib}/*.egg-info
-%{python2_sitelib}/%{srcname}.py
-
-
+%{py_puresitedir}/*.egg-info
+%{py_puresitedir}/%{srcname}.py

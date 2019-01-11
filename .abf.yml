@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   pathlib2-2.1.0.tar.gz: a4329faa7d2f0ba2430eeb57372d3a72ccce6ca2
+sources:
+  pathlib2-2.3.3.tar.gz: 3a902176bb4b5b7f1f112e501409b84c21c7f50c
