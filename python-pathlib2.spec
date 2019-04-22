@@ -2,7 +2,7 @@
 %global srcversion 2.1.0
 
 Name:           python-%srcname
-Version:        2.1.0
+Version:        2.3.3
 Release:        1
 Summary:        Object-oriented filesystem paths
 Group:          Development/Python
