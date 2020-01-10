@@ -36,7 +36,7 @@ pathlib can be used also on older Python versions.
 %prep
 %setup -q -n %{srcname}-%{srcversion}
 
-%apply_patches
+%autopatch -p1
 
 cp -a . %py2dir
 
