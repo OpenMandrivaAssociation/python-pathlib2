@@ -61,6 +61,6 @@ pushd %py2dir
 %files -n python2-%srcname
 %doc README.rst CHANGELOG.rst LICENSE.rst
 %{python2_sitelib}/*.egg-info
-%{python2_sitelib}/%{srcname}.py?
-%{python2_sitelib}/%{srcname}.py
+#{python2_sitelib}/%{srcname}.py?
+#{python2_sitelib}/%{srcname}.py
 
