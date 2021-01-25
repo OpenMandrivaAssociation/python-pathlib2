@@ -1,14 +1,13 @@
 %global srcname pathlib2
-%global srcversion 2.1.0
 
 Name:           python-%srcname
-Version:        2.3.3
+Version:        2.3.5
 Release:        1
 Summary:        Object-oriented filesystem paths
 Group:          Development/Python
 License:        BSD
 URL:            http://github.com/ipython/%srcname
-Source0:        http://pypi.python.org/packages/source/p/%srcname/%{srcname}-%{srcversion}.tar.gz
+Source0:        http://pypi.python.org/packages/source/p/%srcname/%{srcname}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:	python-setuptools
@@ -34,7 +33,7 @@ the standard library module, so all the newest features of the standard\
 pathlib can be used also on older Python versions.
 
 %prep
-%setup -q -n %{srcname}-%{srcversion}
+%setup -q -n %{srcname}-%{version}
 
 %autopatch -p1
 
