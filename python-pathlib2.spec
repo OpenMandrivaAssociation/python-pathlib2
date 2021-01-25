@@ -51,15 +51,12 @@ pushd %py2dir
 pushd %py2dir
 %{__python2} setup.py install -O1 --skip-build --root %{buildroot}
 
-# /usr/lib/python2.7/site-packages/pathlib2.pyc
-#   /usr/lib/python2.7/site-packages/pathlib2.pyo
-#   /usr/lib/python3.7/site-packages/__pycache__/pathlib2.cpython-37.opt-1.pyc
-#   /usr/lib/python3.7/site-packages/__pycache__/pathlib2.cpython-37.pyc
+
 %files
 %doc README.rst CHANGELOG.rst LICENSE.rst
 %{python3_sitelib}/*.egg-info
-%{python3_sitelib}/%{srcname}.py
-%{python3_sitelib}/__pycache__/%{srcname}.cpython-37.*
+#{python3_sitelib}/%{srcname}.py
+#{python3_sitelib}/__pycache__/%{srcname}.cpython-37.*
 
 %files -n python2-%srcname
 %doc README.rst CHANGELOG.rst LICENSE.rst
