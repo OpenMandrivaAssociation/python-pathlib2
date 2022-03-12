@@ -1,17 +1,16 @@
 %global srcname pathlib2
 
-Name:           python-%srcname
-Version:        2.3.5
-Release:        1
-Summary:        Object-oriented filesystem paths
-Group:          Development/Python
-License:        BSD
-URL:            http://github.com/ipython/%srcname
-Source0:        http://pypi.python.org/packages/source/p/%srcname/%{srcname}-%{version}.tar.gz
-BuildArch:      noarch
-
+Name:		python-%srcname
+Version:	2.3.5
+Release:	2
+Summary:	Object-oriented filesystem paths
+Group:		Development/Python
+License:	BSD
+URL:		http://github.com/ipython/%srcname
+Source0:	http://pypi.python.org/packages/source/p/%srcname/%{srcname}-%{version}.tar.gz
+BuildArch:	noarch
 BuildRequires:	python-setuptools
-BuildRequires:	python-devel
+BuildRequires:	pkgconfig(python)
 
 %description
 The old pathlib module on bitbucket is in bugfix-only mode. The goal of\
@@ -20,20 +19,16 @@ the standard library module, so all the newest features of the standard\
 pathlib can be used also on older Python versions.
 
 %prep
-%setup -q -n %{srcname}-%{version}
-
-%autopatch -p1
-
+%autosetup -n %{srcname}-%{version}
 
 %build
-%{__python} setup.py build
-
+%py_build
 
 %install
-%{__python} setup.py install -O1 --skip-build --root %{buildroot}
-
+%py_install
 
 %files
 %doc README.rst CHANGELOG.rst LICENSE.rst
 %{python_sitelib}/*.egg-info
+%dir %{python_sitelib}/pathlib2
 %{python_sitelib}/pathlib2/*
