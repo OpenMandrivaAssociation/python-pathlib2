@@ -6,7 +6,7 @@ Release:	3
 Summary:	Object-oriented filesystem paths
 Group:		Development/Python
 License:	BSD
-URL:		http://github.com/ipython/%srcname
+URL:		https://github.com/ipython/%srcname
 Source0:	http://pypi.python.org/packages/source/p/%srcname/%{srcname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-setuptools
