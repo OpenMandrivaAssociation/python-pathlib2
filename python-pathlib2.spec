@@ -1,15 +1,16 @@
 %global srcname pathlib2
 
 Name:		python-%srcname
-Version:	2.3.5
-Release:	4
+Version:	2.3.7.post1
+Release:	1
 Summary:	Object-oriented filesystem paths
 Group:		Development/Python
 License:	BSD
 URL:		https://github.com/ipython/%srcname
 Source0:	http://pypi.python.org/packages/source/p/%srcname/%{srcname}-%{version}.tar.gz
 BuildArch:	noarch
-BuildRequires:	python-setuptools
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	pkgconfig(python)
 
 %description
