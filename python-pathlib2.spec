@@ -2,7 +2,7 @@
 
 Name:		python-%srcname
 Version:	2.3.7.post1
-Release:	1
+Release:	2
 Summary:	Object-oriented filesystem paths
 Group:		Development/Python
 License:	BSD
