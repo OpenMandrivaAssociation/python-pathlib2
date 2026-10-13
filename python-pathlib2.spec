@@ -2,7 +2,7 @@
 
 Name:		python-%srcname
 Version:	2.3.7.post1
-Release:	2
+Release:	3
 Summary:	Object-oriented filesystem paths
 Group:		Development/Python
 License:	BSD
@@ -11,7 +11,7 @@ Source0:	http://pypi.python.org/packages/source/p/%srcname/%{srcname}-%{version}
 BuildArch:	noarch
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(pip)
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 
 %description
 The old pathlib module on bitbucket is in bugfix-only mode. The goal of\
